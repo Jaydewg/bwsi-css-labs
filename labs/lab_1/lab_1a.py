@@ -5,7 +5,8 @@ The first lab in the BWSI CSS course. To complete this lab, fill out the variabl
 with your name. Then, save the code, add it to the staging area, and commit it to the Git tree.
 """
 
-# This is to simulate a remote editing robot's changes. edited_by_robot=True, i guess?
+# This is to simulate a remote editing robot's changes. edited_by_robot=Maybe, i guess?
+# STEVE, we can't use robots in our projects! :p
 
 
 def main():
