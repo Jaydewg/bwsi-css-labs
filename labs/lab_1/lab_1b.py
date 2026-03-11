@@ -40,16 +40,23 @@ def simple_calculator(operation: str, num1: float, num2: float) -> float:
 def main():
     
     print(f"===== Simple Calculator =====")
+    print(f"= Press CTRL+C to exit calc =")
 
     # Ask the user for sample input    
-    num1 = float(input("Enter the first number: "))
-    num2 = float(input("Enter the second number: "))
-    operation = input("Enter the operation (add, subtract, multiply, divide): ").strip().lower()
-
-    # Perform the calculation and display the result
-    result = simple_calculator(operation, num1, num2)
-    print(f"The result of {operation}ing {num1} and {num2} is: {result}")
-
+    try:
+        num1 = float(input("Enter the first number: "))
+        num2 = float(input("Enter the second number: "))
+        operation = input("Enter the operation (add, subtract, multiply, divide): ").strip().lower()
+    except Exception: 
+        print("Please enter valid numbers.")
+    else:
+        try:
+            # Perform the calculation and display the result
+            result = simple_calculator(operation, num1, num2)
+            print(f"The result of {operation}ing {num1} and {num2} is: {result}")
+        except ValueError as e:
+            print("Error occured concerning entered values. Please follow instructions below:")
+            print(e)
 
 if __name__ == "__main__":
-    main()
+    while True: main()
